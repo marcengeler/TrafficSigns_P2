@@ -92,13 +92,12 @@ some positive results already. This first show was to learn how well performing 
 | Fully connected		| 180 Hidden Units								|
 | Output Layer			| 43 Classes									|
 | Softmax				|    	    									|
-|:---------------------:|:---------------------------------------------:| 
  
-#### Training
+##### Training
 
 To train the model, i used 70 Epochs and Batch Sizes of 128, as well as a learning rate of 0.001 without any decay. The loss function was computed using a cross entropy loss computed with the AdamOptimizer.
 
-#### Result
+##### Result
 
 Accuracy, 70%
 
@@ -123,7 +122,6 @@ introduced a dropout layer. Dropout layers randomize the outout of the data, so 
 | Fully connected		| 172 Hidden Units								|
 | Output Layer			| 43 Classes									|
 | Softmax				|    	    									|
-|:---------------------:|:---------------------------------------------:| 
 
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
