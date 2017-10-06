@@ -1,6 +1,6 @@
-#**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 
-##Writeup
+## Writeup
 
 ---
 
@@ -17,8 +17,8 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[balance] ./examples/chart_class_num.PNG "Class Balance"
-[sanity] ./examples/sanity_checks.PNG "Sanity Checks"
+[balance]: ./examples/chart_class_num.PNG "Class Balance"
+[sanity]: ./examples/sanity_checks.PNG "Sanity Checks"
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
