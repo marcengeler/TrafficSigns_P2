@@ -140,6 +140,8 @@ In the first shot I reached a validation accuracy of around 94%. However, this i
 
 The first method I used, was switching to grayscale image, als in the publication from Sermanet/LeCunn, this proved to be a good increase in accuracy. Also I introduced some data augmentation.
 
+In order to get some hands on insights on data augmentation, I used a simple google search to look for similar tasks, which were solved by data augmentation. Similar Augmentation methods were also used in similar applications, which motivated the use of these principles.
+
 The first method, which was introduced, was the random shifting of the image. This way, the image was shifted by up to two pixels in a random direction, this doubled the number of available images from ~7000 to over 14000 training images. However,
 this was still not enough to get good and reliable training results.
 
