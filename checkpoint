@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:/Users/Marc Engeler/PycharmProjects/TrafficSigns_P2/lenet"
+all_model_checkpoint_paths: "C:/Users/Marc Engeler/PycharmProjects/TrafficSigns_P2/lenet"
