@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [balance]: ./examples/chart_class_num.PNG "Class Balance"
 [crop_ratio]: ./examples/crop_ratio.PNG "Crop Ratio"
 [own_images]: ./examples/own_images.PNG "Own Images"
-[accuracy_result]: ./examples/accuracy.PNG "Accuracy"
+[accuracy]: ./examples/accuracy.PNG "Accuracy"
 [skew]: ./examples/skew.PNG "Image Skewing"
 [balance2]: ./examples/balancing_2.PNG "Class Balance"
 [sanity]: ./examples/sanity_checks.PNG "Sanity Checks"
