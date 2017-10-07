@@ -19,6 +19,7 @@ The goals / steps of this project are the following:
 
 [balance]: ./examples/chart_class_num.PNG "Class Balance"
 [sanity]: ./examples/sanity_checks.PNG "Sanity Checks"
+[lenet2]: ./examples/yann_lecun.PNG "New Network Architecture"
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
@@ -103,23 +104,25 @@ Accuracy, 70%
 
 #### Second Model: Own Architecture
 
-Because the first Model was not able to reach an accuracy of above 90% i decided to make a larger network. The previous network was clearly not able to grasp all the features of the image. However, to counter the danger of overfitting I
-introduced a dropout layer. Dropout layers randomize the outout of the data, so the network has to learn redundancy. This way, overfitting is reduced.
+Because the first Model was not able to reach an accuracy of above 90% i decided to take a look at literature. The Sermanet/LeCunn Article showed promising results on grayscale images, thus I adapted the input arrays to grayscale.
+Also, the network had a different architecture and is depicted here.
+
+![alt text][lenet2]
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 5 x 5   	| 1 x 1 stride, valid padding, outputs 32x32x64	|
+| Input         		| 32x32x1 Grayscale Image						| 
+| Convolution 5 x 5   	| 1 x 1 stride, valid padding, outputs 32x32x18	|
 | RELU					|												|
-| Max pooling	      	| 2 x 2 stride,  outputs 16x16x64 				|
-| Convolution 5 x 5	    | 1 x 1	stride, valid padding, outputs 16x16x256|
+| Max pooling	      	| 2 x 2 stride,  outputs 16x16x18 				|
+| Convolution 5 x 5	    | 1 x 1	stride, valid padding, outputs 16x16x48	|
 | RELU					|												|
-| Max pooling	      	| 2 x 2 stride,  outputs 8x8x256 				|
-| Fully connected		| 3200 Hidden Units								|
+| Max pooling	      	| 2 x 2 stride,  outputs 8x8x48 				|
+| Convolution 5 x 5	    | 1 x 1	stride, valid padding, outputs 8x8x600	|
+| RELU					|												|
+| Concatenation of Layer 2 and 3	|									|
 | Dropout Layer			| Keep Prob = 0.5								|
-| Fully connected		| 1600 Hidden Units								|
-| Fully connected		| 800 Hidden Units								|
-| Fully connected		| 172 Hidden Units								|
+| Fully connected		| 1800 Hidden Units								|
 | Output Layer			| 43 Classes									|
 | Softmax				|    	    									|
 
