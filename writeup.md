@@ -18,6 +18,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [balance]: ./examples/chart_class_num.PNG "Class Balance"
+[skew]: ./examples/skew.PNG "Image Skewing"
 [balance2]: ./examples/balancing_2.PNG "Class Balance"
 [sanity]: ./examples/sanity_checks.PNG "Sanity Checks"
 [lenet2]: ./examples/yann_lecun.PNG "New Network Architecture"
@@ -58,7 +59,7 @@ which roughly normalized an image containing values from 0 to 255.
 
 #### Visualization and Sanity Checks
 
-To check the dataset i chose random 5 images from each class to check if this looks good
+To check the dataset i chose random 5 images from each class to check if this looks good. Example:
 
 ![alt text][sanity]
 
@@ -149,7 +150,12 @@ Another method which was implemented was random brightness adjustment.
 
 ![alt text][brightness]
 
-After these new datapoints, the balancing issue could also be solved more or less. I capped the specific classes at 3 * the images the smalles class has. 
+To further enhance the image data, without loss of information, the images were skewed up to 10° degrees
+
+![alt text][skew]
+
+In order for the images, to stay as close to the originals as possible, i had to make sure, that the exrapolation methods at the borders, for all those applications were set to encorporate the surrounding pixels. OpenCV offers this functionality
+and I had to make sure to include this. After these new datapoints, the balancing issue could also be solved more or less. I capped the specific classes at 3 * the images the smalles class has. 
 
 ![alt text][balance2]
 
