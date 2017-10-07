@@ -18,6 +18,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [balance]: ./examples/chart_class_num.PNG "Class Balance"
+[balance2]: ./examples/balancing_2.PNG "Class Balance"
 [sanity]: ./examples/sanity_checks.PNG "Sanity Checks"
 [lenet2]: ./examples/yann_lecun.PNG "New Network Architecture"
 [shifting]: ./examples/shifting.PNG "Image Shifting"
@@ -147,6 +148,10 @@ Another method which was implemented was random image scaling. For any image in 
 Another method which was implemented was random brightness adjustment.
 
 ![alt text][brightness]
+
+After these new datapoints, the balancing issue could also be solved more or less. I capped the specific classes at 3 * the images the smalles class has. 
+
+![alt text][balance2]
 
 ### Overfitting Testing
 
