@@ -22,6 +22,7 @@ The goals / steps of this project are the following:
 [lenet2]: ./examples/yann_lecun.PNG "New Network Architecture"
 [shifting]: ./examples/shifting.PNG "Image Shifting"
 [scaling]: ./examples/scaling.PNG "Image Scaling"
+[brightness]: ./examples/brightness.PNG "Image Brightness Adjust"
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
@@ -136,10 +137,16 @@ The first method I used, was switching to grayscale image, als in the publicatio
 
 The first method, which was introduced, was the random shifting of the image. This way, the image was shifted by up to two pixels in a random direction, this doubled the number of available images from ~7000 to over 14000 training images. However,
 this was still not enough to get good and reliable training results.
+
 ![alt text][shifting]
 
 Another method which was implemented was random image scaling. For any image in the test set, the image was also randomly scaled in addition to the original image.
+
 ![alt text][scaling]
+
+Another method which was implemented was random brightness adjustment.
+
+![alt text][brightness]
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
